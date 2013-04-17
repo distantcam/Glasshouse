@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{79BDFFC1-07B2-41E4-BA54-8A696D69C42E}</ProjectGuid>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <ArtifactDir>$(SolutionDir)artifacts</ArtifactDir>
+    <NuGetPackageDir>Lib\net45\</NuGetPackageDir>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <ConfigurationName>Debug</ConfigurationName>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <ConfigurationName>Release</ConfigurationName>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Glasshouse\Glasshouse.csproj">
+      <Project>{7e439352-895e-402f-be33-4b9b57e09f36}</Project>
+      <Name>Glasshouse</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Nuspec Include="Glasshouse.nuspec">
+      <SubType>Designer</SubType>
+    </Nuspec>
+  </ItemGroup>
+  
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <Import Project="$(SolutionDir)Tools\GenerateCommonAssemblyInfo.targets" />
+  <Import Project="$(SolutionDir)Tools\NuGetProject.targets" />  
+</Project>
