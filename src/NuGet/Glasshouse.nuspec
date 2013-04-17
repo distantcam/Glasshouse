@@ -9,11 +9,15 @@
     <licenseUrl>http://www.opensource.org/licenses/mit-license.php</licenseUrl>
     <projectUrl>http://github.com/distantcam/$id$</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>A library for interacting with a Pebble via bluetooth.</description>
+    <description>Nothing... for now</description>
     <summary />
     <language>en-AU</language>
-    <tags>Pebble</tags>
+    <tags>Empty</tags>
     <dependencies>
+
+      <group targetFramework="net40">
+        <dependency id="32feet.NET" version="3.5.0.0" />
+      </group>
 
       <group targetFramework="net45">
         <dependency id="32feet.NET" version="3.5.0.0" />
